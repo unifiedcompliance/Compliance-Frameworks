@@ -12,17 +12,15 @@ JSON has only two structures; objects and arrays. _Everything_ in JSON is either
 
 To explain this, we’ll go back to a couple of the tables from above; a simple name table \(left\) and a complex name/address table \(right\):
 
-![A screenshot of a cell phone
+![Simple name table](../.gitbook/assets/1%20%281%29.png) ![A screenshot of a cell phone
 
-Description automatically generated](../.gitbook/assets/1%20%281%29.png) ![A screenshot of a cell phone
-
-Description automatically generated](../.gitbook/assets/2%20%281%29.png)
+![Complex name array](../.gitbook/assets/2%20%281%29.png)
 
 ### Object syntax
 
 The properties of every JSON object are derived from three elements:
 
-* * Key – think _field name_ or _table name_ here.
+* Key – think _field name_ or _table name_ here.
   * Value – this is the _content_ of the field, and is left blank for an object or array.
   * Type – this describes one of three things: an object, an array, or the field type for the content.
 
@@ -78,7 +76,7 @@ Very clearly this JSON tells us that this _table_ is called **Names** and it has
 
 Now that we understand objects and arrays, let’s go back to that name and address table and put both of them together. When finished, what we want is:
 
-* * an array of names; and
+* an array of names; and
   * an array of addresses _for each name_.
 
 So we build out a tree that looks like the one that follows:
