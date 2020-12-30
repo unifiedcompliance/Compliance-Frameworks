@@ -4,10 +4,8 @@
 
 ## An Approach to Unified Compliance <a id="unified_compliance"></a>
 
----
-
-* [Authorship](authorship.md)
-* [Housekeeping](housekeeping.md)
+* [Authorship](unified_compliance/authorship.md)
+* [Housekeeping](unified_compliance/housekeeping.md)
 
 ## Introduction to Complying
 

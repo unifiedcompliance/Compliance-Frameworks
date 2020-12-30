@@ -16,19 +16,19 @@ The line of authority can be short \(a flatarchy is the shortest of all\), or it
 
 Span of Control, or the ratio of subordinates to superiors.
 
-![](../../../.gitbook/assets/span-of-control.png)
+![](../../../.gitbook/assets/centralized.png)
 
 The higher the ratio of subordinates to superiors, the wider the span of control.
 
 #### Centralized control
 
-![](../../../.gitbook/assets/centralized.png)
+![](../../../.gitbook/assets/centralized%20%281%29.png)
 
 If decision-making power is concentrated at a single point, the organizational structure is centralized.
 
 #### Decentralized control
 
-![](../../../.gitbook/assets/decentralized.png)
+![](../../../.gitbook/assets/formal-structures%20%281%29.png)
 
 If decision-making power is spread out, the structure is decentralized.
 

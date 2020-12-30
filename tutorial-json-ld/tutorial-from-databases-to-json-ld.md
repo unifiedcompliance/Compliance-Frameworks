@@ -2,7 +2,7 @@
 
 Databases are great. However, no-one is going to let you connect directly with their database to share data. We aren’t going to spend any time on all of the ways in which data have been shared between databases \(EDI, XML, direct API queries\); the answer _today_ is JavaScript Object Notation.
 
-JavaScript Object Notation, JSON from here on out, has a small, well-defined and logical set of rules, enabling you to encode, store and retrieve structured data in a format that is easily readable by both humans and machines. It has become _**the**_ ****data exchange format on the Web, and if you aren’t already working with it, you _will_ be working with it when communicating your compliance framework.
+JavaScript Object Notation, JSON from here on out, has a small, well-defined and logical set of rules, enabling you to encode, store and retrieve structured data in a format that is easily readable by both humans and machines. It has become _**the**_ _\*\*_data exchange format on the Web, and if you aren’t already working with it, you _will_ be working with it when communicating your compliance framework.
 
 ## The structure of JSON
 
@@ -10,9 +10,9 @@ JSON has only two structures; objects and arrays. _Everything_ in JSON is either
 
 ![from databases to JSON-LD](../.gitbook/assets/0%20%281%29.png)
 
-To explain this, we’ll go back to a couple of the tables from above; a simple name table \(left\) and a complex name/address table \(right\):
+To explain this, we’ll go back to a couple of the tables from above; a simple name table \(top\) and a complex name/address table \(bottom\):
 
-![Simple name table](../.gitbook/assets/1%20%281%29.png) ![A screenshot of a cell phone
+![Simple table](../.gitbook/assets/image.png)
 
 ![Complex name array](../.gitbook/assets/2%20%281%29.png)
 
@@ -54,9 +54,9 @@ The _type_ isn’t presented in basic JSON code \(we’ll get to that as a part 
 
 Simple arrays, as a JSON type, are surrounded by square brackets “\[ \]” and consist of comma-separated values. If you wanted to present the column of three numbers as we did in the spreadsheet, it would be expressed as a simple array. In tree format, the simple array looks like this:
 
-![A screenshot of a cell phone
+!\[A screenshot of a cell phone
 
-Description automatically generated](../.gitbook/assets/7%20%281%29.png)
+Description automatically generated\]\(../.gitbook/assets/7%20%281%29.png\)
 
 In JSON format, it looks like this, with the account number split from the account name.
 
@@ -97,11 +97,11 @@ There is no doubt that JSON is the shareable language that all systems are curre
 
 ![JSON allows ubiquitous communication](../.gitbook/assets/13.png)
 
-In 2011, Google, Bing, Yahoo!, and Yandex created a joint effort to unify a structured data vocabulary for the web and the output was twofold; JavaScript Object Notation for Linked Data \(JSON-LD\) and the vocabulary repository for it at Schema.org[\[1\]]().
+In 2011, Google, Bing, Yahoo!, and Yandex created a joint effort to unify a structured data vocabulary for the web and the output was twofold; JavaScript Object Notation for Linked Data \(JSON-LD\) and the vocabulary repository for it at Schema.org[\[1\]](tutorial-from-databases-to-json-ld.md).
 
 ![Schema.org](../.gitbook/assets/14.png)
 
-The initial goal for JSON-LD was to annotate elements on a web page, structuring the data, which can then be used by search engines to disambiguate elements and establish facts surrounding entities, which is then associated with creating a more organized, better web overall[\[2\]]().
+The initial goal for JSON-LD was to annotate elements on a web page, structuring the data, which can then be used by search engines to disambiguate elements and establish facts surrounding entities, which is then associated with creating a more organized, better web overall[\[2\]](tutorial-from-databases-to-json-ld.md).
 
 ![JSON-LD](../.gitbook/assets/15.png)
 
@@ -139,6 +139,6 @@ By labelling each type of thing in a JSON object, you can provide the necessary 
 
 ### Endnotes
 
-1.  Although Schema.org is only one of the JSON-LD repositories as we’ll see later on. Organizations such as NIST have their own model maps \(“Catalog JSON Model Map” n.d.\) and so does GRCschema.org \(which we’ll be working with. [↑]()
-2.  \(“A Guide to JSON-LD for Beginners” n.d.\) [↑]()
+1. Although Schema.org is only one of the JSON-LD repositories as we’ll see later on. Organizations such as NIST have their own model maps \(“Catalog JSON Model Map” n.d.\) and so does GRCschema.org \(which we’ll be working with. [↑](tutorial-from-databases-to-json-ld.md)
+2. \(“A Guide to JSON-LD for Beginners” n.d.\) [↑](tutorial-from-databases-to-json-ld.md)
 
