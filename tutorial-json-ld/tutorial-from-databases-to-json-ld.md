@@ -62,25 +62,15 @@ Description automatically generated](../.gitbook/assets/7%20%281%29.png)
 
 In JSON format, it looks like this, with the account number split from the account name.
 
-![A screenshot of a cell phone
-
-Description automatically generated](../.gitbook/assets/8%20%281%29.png)
-
-Oversimplified Array
+![Oversimplified Array](../.gitbook/assets/8%20%281%29.png)
 
 That won’t work well to create a table. And this is where objects as a _type_ come in to play. If we re-arrange the tree to add a set of object brackets “{ }”, we can then add the key to the property and display each of the name records with their individual fields in the array:
 
-![A screenshot of a cell phone
-
-Description automatically generated](../.gitbook/assets/9%20%281%29.png)
+![The same array in JSON](../.gitbook/assets/9%20%281%29.png)
 
 Now the JSON structure will separate each record and display the key/value pair for each record in the array:
 
-![A screenshot of a cell phone
-
-Description automatically generated](../.gitbook/assets/10.png)
-
-JSON structure with table and field names
+![JSON structure with table and field names](../.gitbook/assets/10.png)
 
 Very clearly this JSON tells us that this _table_ is called **Names** and it has two fields \(keys\) named **Acct:** and **Name**.
 
@@ -93,17 +83,11 @@ Now that we understand objects and arrays, let’s go back to that name and addr
 
 So we build out a tree that looks like the one that follows:
 
-![A screenshot of a cell phone
-
-Description automatically generated](../.gitbook/assets/11.png)
+![A complex object array](../.gitbook/assets/11.png)
 
 With this, the JSON structure embeds an array for each name and then embeds another array _within that one_ for each address.
 
-![A screenshot of a cell phone
-
-Description automatically generated](../.gitbook/assets/12.png)
-
-A complex JSON Object with embedded Arrays
+![A complex JSON Object with embedded Arrays](../.gitbook/assets/12.png)
 
 While this is great stuff, there isn’t yet enough information to tell a developer how to automatically translate this into a database structure. Remember that basic JSON doesn’t even pass along the key/value _type_.
 
@@ -113,81 +97,49 @@ We must turn to JSON-LD for more information.
 
 There is no doubt that JSON is the shareable language that all systems are currently using to share data back and forth. However, there was no standardized methodology to share JSON with the ubiquitous web browsers that _everyone_ uses to communicate.
 
-![A screenshot of a computer
-
-Description automatically generated](../.gitbook/assets/13.png)
-
-JSON allows ubiquitous communication
+![JSON allows ubiquitous communication](../.gitbook/assets/13.png)
 
 In 2011, Google, Bing, Yahoo!, and Yandex created a joint effort to unify a structured data vocabulary for the web and the output was twofold; JavaScript Object Notation for Linked Data \(JSON-LD\) and the vocabulary repository for it at Schema.org[\[1\]]().
 
-![A screenshot of a video game
-
-Description automatically generated](../.gitbook/assets/14.png)
-
-Schema.org
+![Schema.org](../.gitbook/assets/14.png)
 
 The initial goal for JSON-LD was to annotate elements on a web page, structuring the data, which can then be used by search engines to disambiguate elements and establish facts surrounding entities, which is then associated with creating a more organized, better web overall[\[2\]]().
 
-![A screenshot of a cell phone
-
-Description automatically generated](../.gitbook/assets/15.png)
-
-JSON-LD
+![JSON-LD](../.gitbook/assets/15.png)
 
 ### The Context
 
 The first element that retains a permanent place in JSON-LD markup is the @context with the value of the schema URL you are going to use. Currently there are two known schemas that support compliance frameworks, [http://schema.org](http://schema.org/) and [https://grcschema.org](https://grcschema.org/). In tree view, the context is laid out as an array of information.
 
-![A screenshot of a cell phone
-
-Description automatically generated](../.gitbook/assets/16.png)
+![The context](../.gitbook/assets/16.png)
 
 One thing to notice here in JSON-LD is the wealth of information _about the data structure_ that is also passed to the reader! The rdfs:labels tell give you the object name while the rdfs:comment gives you the information _about_ the object you are dealing with.
 
-![A screenshot of a cell phone
-
-Description automatically generated](../.gitbook/assets/17.png)
-
-rdfs:comment
+![rdfs:comment](../.gitbook/assets/17.png)
 
 #### The Type
 
 The second element in the JSON-LD Schema “always there” squad is the @type specification \(after the colon, it becomes all data annotation\). @type specifies the item type being marked up. All Types have as their top level, _Thing_ as shown below:
 
-![A screenshot of a cell phone
-
-Description automatically generated](../.gitbook/assets/18.png)
-
-@type
+![@type](../.gitbook/assets/18.png)
 
 #### Schema Properties
 
 Within JSON-LD, each object’s properties are described in-depth. Below we present the property for _first\_name_ and are able to tell the reader that this is _text_ element and, in the comments, that it represents a person’s first name.
 
-![A screenshot of a cell phone
-
-Description automatically generated](../.gitbook/assets/19.png)
-
-schema:Property
+![schema:Property](../.gitbook/assets/19.png)
 
 #### Schema Arrays
 
 In addition to standard schema properties, JSON Context can also tell the reader that what is being presented is an array. In the example below, the _person_ object allows for an array of additional e-mail addresses. This is described, in JSON-LD Context, as a set \(“@set”\):
 
-![A screenshot of a cell phone
-
-Description automatically generated](../.gitbook/assets/20.png)
-
-@set
+![@set](../.gitbook/assets/20.png)
 
 By labelling each type of thing in a JSON object, you can provide the necessary code to developers to create structured pages that use either Microdata or RDF to tag HTML tag attributes that correspond to the user-visible content that you want to describe.
 
-![A screenshot of a cell phone
+![Labeled JSON-LD](../.gitbook/assets/21.png)
 
-Description automatically generated](../.gitbook/assets/21.png)
-
-Labelled JSON-LD
+### Endnotes
 
 1.  Although Schema.org is only one of the JSON-LD repositories as we’ll see later on. Organizations such as NIST have their own model maps \(“Catalog JSON Model Map” n.d.\) and so does GRCschema.org \(which we’ll be working with. [↑]()
 2.  \(“A Guide to JSON-LD for Beginners” n.d.\) [↑]()
