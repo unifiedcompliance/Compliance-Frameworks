@@ -55,4 +55,5 @@
 ## Tutorial: JSON-LD
 
 * [Tutorial: from databases to JSON-LD](tutorial-json-ld/tutorial-from-databases-to-json-ld.md)
+* [Converting JSON-LD into database structures](tutorial-json-ld/converting-json-ld-into-database-structures.md)
 
