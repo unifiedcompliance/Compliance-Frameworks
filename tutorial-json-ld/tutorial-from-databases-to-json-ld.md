@@ -8,7 +8,7 @@ JavaScript Object Notation, JSON from here on out, has a small, well-defined and
 
 JSON has only two structures; objects and arrays. _Everything_ in JSON is either an object or an array. And more importantly, objects can have embedded objects as well as embedded arrays. And arrays can have embedded objects. _Way cool_.
 
-![from databases to JSON-LD](../.gitbook/assets/0%20%281%29.png)
+![from databases to JSON-LD](https://gblobscdn.gitbook.com/assets%2Fcompliance-frameworks%2F-MPpgOWhglm7OWuqZhlW%2F-MPpge8JTAB-U_Jxg7tK%2F0.png?alt=media)
 
 To explain this, we’ll go back to a couple of the tables from above; a simple name table \(top\) and a complex name/address table \(bottom\):
 
