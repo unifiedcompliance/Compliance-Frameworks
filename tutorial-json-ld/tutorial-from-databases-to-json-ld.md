@@ -2,19 +2,19 @@
 
 Databases are great. However, no-one is going to let you connect directly with their database to share data. We aren’t going to spend any time on all of the ways in which data have been shared between databases \(EDI, XML, direct API queries\); the answer _today_ is JavaScript Object Notation.
 
-JavaScript Object Notation, JSON from here on out, has a small, well-defined and logical set of rules, enabling you to encode, store and retrieve structured data in a format that is easily readable by both humans and machines. It has become _**the**_ _\*\*_data exchange format on the Web, and if you aren’t already working with it, you _will_ be working with it when communicating your compliance framework.
+JavaScript Object Notation, JSON from here on out, has a small, well-defined and logical set of rules, enabling you to encode, store and retrieve structured data in a format that is easily readable by both humans and machines. It has become _**the**_ data exchange format on the Web, and if you aren’t already working with it, you will be working with it when communicating your compliance framework.
 
 ## The structure of JSON
 
 JSON has only two structures; objects and arrays. _Everything_ in JSON is either an object or an array. And more importantly, objects can have embedded objects as well as embedded arrays. And arrays can have embedded objects. _Way cool_.
 
-![*from databases to JSON-LD*](https://gblobscdn.gitbook.com/assets%2Fcompliance-frameworks%2F-MPpgOWhglm7OWuqZhlW%2F-MPpge8JTAB-U_Jxg7tK%2F0.png?alt=media)
+![\*from databases to JSON-LD\*](https://gblobscdn.gitbook.com/assets%2Fcompliance-frameworks%2F-MPpgOWhglm7OWuqZhlW%2F-MPpge8JTAB-U_Jxg7tK%2F0.png?alt=media)
 
 To explain this, we’ll go back to a couple of the tables from above; a simple name table \(top\) and a complex name/address table \(bottom\):
 
-![*Simple table*](https://gblobscdn.gitbook.com/assets%2F-M6pdiwC0P_780C6yzDX%2F-MPpkZoG7XgiYoAxFK0a%2F-MPpkmWNMHGEMffDAY3R%2Fimage.png?alt=media&token=a03f47dc-4db5-4c08-8473-ff18ae216193)
+![\*Simple table\*](https://gblobscdn.gitbook.com/assets%2F-M6pdiwC0P_780C6yzDX%2F-MPpkZoG7XgiYoAxFK0a%2F-MPpkmWNMHGEMffDAY3R%2Fimage.png?alt=media&token=a03f47dc-4db5-4c08-8473-ff18ae216193)
 
-![*Complex name array*](https://gblobscdn.gitbook.com/assets%2Fcompliance-frameworks%2F-MPpgOWhglm7OWuqZhlW%2F-MPpge8LblfrM--WIp8Q%2F2.png?alt=media)
+![\*Complex name array\*](https://gblobscdn.gitbook.com/assets%2Fcompliance-frameworks%2F-MPpgOWhglm7OWuqZhlW%2F-MPpge8LblfrM--WIp8Q%2F2.png?alt=media)
 
 ### Object syntax
 
