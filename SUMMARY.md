@@ -54,3 +54,7 @@
       * [ISFP – Introverted, Sensing, Feeling, Perceiving](organizational_structures/organizational-structures/organizational-structures-401/creating-your/isfp-introverted-sensing-feeling-perceiving.md)
     * [Rolling out your communications plan](organizational_structures/organizational-structures/organizational-structures-401/creating-a-communications-plan.md)
 
+## Tutorial: JSON-LD
+
+* [Tutorial: from databases to JSON-LD](tutorial-json-ld/tutorial-from-databases-to-json-ld.md)
+
