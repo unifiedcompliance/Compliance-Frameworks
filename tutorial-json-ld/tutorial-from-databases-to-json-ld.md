@@ -21,8 +21,8 @@ To explain this, we’ll go back to a couple of the tables from above; a simple 
 The properties of every JSON object are derived from three elements:
 
 * Key – think _field name_ or _table name_ here.
-  * Value – this is the _content_ of the field, and is left blank for an object or array.
-  * Type – this describes one of three things: an object, an array, or the field type for the content.
+* Value – this is the _content_ of the field, and is left blank for an object or array.
+* Type – this describes one of three things: an object, an array, or the field type for the content.
 
 JSON turns the combination of _keys_ and _values_ into a **property**, which are paired together separated by a colon in a JSON Object. This is also called the key:value pair, where the property name is expressed then the property value "property name": "property value".
 
@@ -75,7 +75,7 @@ Very clearly this JSON tells us that this _table_ is called **Names** and it has
 Now that we understand objects and arrays, let’s go back to that name and address table and put both of them together. When finished, what we want is:
 
 * an array of names; and
-  * an array of addresses _for each name_.
+* an array of addresses _for each name_.
 
 So we build out a tree that looks like the one that follows:
 
@@ -105,7 +105,7 @@ The initial goal for JSON-LD was to annotate elements on a web page, structuring
 
 ### The Context
 
-The first element that retains a permanent place in JSON-LD markup is the @context with the value of the schema URL you are going to use. Currently there are two known schemas that support compliance frameworks, [http://schema.org](http://schema.org/) and [https://grcschema.org](https://grcschema.org/). In tree view, the context is laid out as an array of information.
+The first element that retains a permanent place in JSON-LD markup is the @context with the value of the schema URL you are going to use. Currently, there are two known schemas that support compliance frameworks, [http://schema.org](http://schema.org/) and [https://grcschema.org](https://grcschema.org/). In the tree view, the context is laid out as an array of information.
 
 ![The context](../.gitbook/assets/16.png)
 
@@ -115,7 +115,7 @@ One thing to notice here in JSON-LD is the wealth of information _about the data
 
 #### The Type
 
-The second element in the JSON-LD Schema “always there” squad is the @type specification \(after the colon, it becomes all data annotation\). @type specifies the item type being marked up. All Types have as their top level, _Thing_ as shown below:
+The second element in the JSON-LD Schema “always there” squad is the @type specification \(after the colon, it becomes all data annotation\). @type specifies the item type being marked up. All Types have as their top-level, _Thing_ as shown below:
 
 ![@type](../.gitbook/assets/18.png)
 
@@ -131,7 +131,7 @@ In addition to standard schema properties, JSON Context can also tell the reader
 
 ![@set](../.gitbook/assets/20.png)
 
-By labelling each type of thing in a JSON object, you can provide the necessary code to developers to create structured pages that use either Microdata or RDF to tag HTML tag attributes that correspond to the user-visible content that you want to describe.
+By labeling each type of thing in a JSON object, you can provide the necessary code to developers to create structured pages that use either Microdata or RDF to tag HTML tag attributes that correspond to the user-visible content that you want to describe.
 
 ![Labeled JSON-LD](../.gitbook/assets/21.png)
 
