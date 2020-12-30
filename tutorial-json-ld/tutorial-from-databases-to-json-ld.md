@@ -54,9 +54,7 @@ The _type_ isn’t presented in basic JSON code \(we’ll get to that as a part 
 
 Simple arrays, as a JSON type, are surrounded by square brackets “\[ \]” and consist of comma-separated values. If you wanted to present the column of three numbers as we did in the spreadsheet, it would be expressed as a simple array. In tree format, the simple array looks like this:
 
-!\[A screenshot of a cell phone
-
-Description automatically generated\]\(../.gitbook/assets/7%20%281%29.png\)
+![JSON array in tree format](../.gitbook/assets/image%20%281%29.png)
 
 In JSON format, it looks like this, with the account number split from the account name.
 
