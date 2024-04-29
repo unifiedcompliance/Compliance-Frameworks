@@ -1,6 +1,6 @@
 # Tutorial: from databases to JSON-LD
 
-Databases are great. However, no-one is going to let you connect directly with their database to share data. We aren’t going to spend any time on all of the ways in which data have been shared between databases \(EDI, XML, direct API queries\); the answer _today_ is JavaScript Object Notation.
+Databases are great. However, no-one is going to let you connect directly with their database to share data. We aren’t going to spend any time on all of the ways in which data have been shared between databases (EDI, XML, direct API queries); the answer _today_ is JavaScript Object Notation.
 
 JavaScript Object Notation, JSON from here on out, has a small, well-defined and logical set of rules, enabling you to encode, store and retrieve structured data in a format that is easily readable by both humans and machines. It has become _**the**_ data exchange format on the Web, and if you aren’t already working with it, you will be working with it when communicating your compliance framework.
 
@@ -8,11 +8,11 @@ JavaScript Object Notation, JSON from here on out, has a small, well-defined and
 
 JSON has only two structures; objects and arrays. _Everything_ in JSON is either an object or an array. And more importantly, objects can have embedded objects as well as embedded arrays. And arrays can have embedded objects. _Way cool_.
 
-![\*from databases to JSON-LD\*](https://gblobscdn.gitbook.com/assets%2Fcompliance-frameworks%2F-MPpgOWhglm7OWuqZhlW%2F-MPpge8JTAB-U_Jxg7tK%2F0.png?alt=media)
+![\*from databases to JSON-LD\*](https://gblobscdn.gitbook.com/assets%2Fcompliance-frameworks%2F-MPpgOWhglm7OWuqZhlW%2F-MPpge8JTAB-U\_Jxg7tK%2F0.png?alt=media)
 
-To explain this, we’ll go back to a couple of the tables from above; a simple name table \(top\) and a complex name/address table \(bottom\):
+To explain this, we’ll go back to a couple of the tables from above; a simple name table (top) and a complex name/address table (bottom):
 
-![\*Simple table\*](https://gblobscdn.gitbook.com/assets%2F-M6pdiwC0P_780C6yzDX%2F-MPpkZoG7XgiYoAxFK0a%2F-MPpkmWNMHGEMffDAY3R%2Fimage.png?alt=media&token=a03f47dc-4db5-4c08-8473-ff18ae216193)
+![\*Simple table\*](https://gblobscdn.gitbook.com/assets%2F-M6pdiwC0P\_780C6yzDX%2F-MPpkZoG7XgiYoAxFK0a%2F-MPpkmWNMHGEMffDAY3R%2Fimage.png?alt=media\&token=a03f47dc-4db5-4c08-8473-ff18ae216193)
 
 ![\*Complex name array\*](https://gblobscdn.gitbook.com/assets%2Fcompliance-frameworks%2F-MPpgOWhglm7OWuqZhlW%2F-MPpge8LblfrM--WIp8Q%2F2.png?alt=media)
 
@@ -26,11 +26,11 @@ The properties of every JSON object are derived from three elements:
 
 JSON turns the combination of _keys_ and _values_ into a **property**, which are paired together separated by a colon in a JSON Object. This is also called the key:value pair, where the property name is expressed then the property value "property name": "property value".
 
-![Property names and values](../.gitbook/assets/3%20%281%29.png)
+![Property names and values](<../.gitbook/assets/3 (1).png>)
 
 This is more easily understood once you start adding content to a JSON file. Let’s start with a blank one, below:
 
-![Root Object in JSON](../.gitbook/assets/4%20%281%29.png)
+![Root Object in JSON](<../.gitbook/assets/4 (1).png>)
 
 The _Root_ object in JSON is always described as a simple pair of curly brackets “{ }”. At this point, there are no keys, no values, and no defined types.
 
@@ -38,41 +38,41 @@ To this, we are going to add the various types of content.
 
 ### Writing Objects
 
-Objects \(think a single record in a table even if it only has one field\), are surrounded by curly brackets “{ }” to denote that everything inside of the brackets is a single object, that consist of _strings_ of comma-separated key:value pairs \(pairings of keys and then their values separated by colons\). Here’s the first row of the name table in JSON.
+Objects (think a single record in a table even if it only has one field), are surrounded by curly brackets “{ }” to denote that everything inside of the brackets is a single object, that consist of _strings_ of comma-separated key:value pairs (pairings of keys and then their values separated by colons). Here’s the first row of the name table in JSON.
 
 In tree format, the object looks like this:
 
-![JSON Tree](../.gitbook/assets/5%20%281%29.png)
+![JSON Tree](<../.gitbook/assets/5 (1).png>)
 
-In JSON format, it looks like this, where each of the fields in the tree is returned as a new line ending in a comma. The key \(field name\) always precedes the value \(field contents\):
+In JSON format, it looks like this, where each of the fields in the tree is returned as a new line ending in a comma. The key (field name) always precedes the value (field contents):
 
-![A single JSON Object with two key/value pairs](../.gitbook/assets/6%20%281%29.png)
+![A single JSON Object with two key/value pairs](<../.gitbook/assets/6 (1).png>)
 
-The _type_ isn’t presented in basic JSON code \(we’ll get to that as a part of JSON-LD in a bit\).
+The _type_ isn’t presented in basic JSON code (we’ll get to that as a part of JSON-LD in a bit).
 
 ### Arrays
 
-Simple arrays, as a JSON type, are surrounded by square brackets “\[ \]” and consist of comma-separated values. If you wanted to present the column of three numbers as we did in the spreadsheet, it would be expressed as a simple array. In tree format, the simple array looks like this:
+Simple arrays, as a JSON type, are surrounded by square brackets “\[ ]” and consist of comma-separated values. If you wanted to present the column of three numbers as we did in the spreadsheet, it would be expressed as a simple array. In tree format, the simple array looks like this:
 
-![JSON array in tree format](../.gitbook/assets/image%20%281%29.png)
+![JSON array in tree format](<../.gitbook/assets/image (1).png>)
 
 In JSON format, it looks like this, with the account number split from the account name.
 
-![Oversimplified Array](../.gitbook/assets/8%20%281%29.png)
+![Oversimplified Array](<../.gitbook/assets/8 (1).png>)
 
 That won’t work well to create a table. And this is where objects as a _type_ come in to play. If we re-arrange the tree to add a set of object brackets “{ }”, we can then add the key to the property and display each of the name records with their individual fields in the array:
 
-![The same array in JSON](../.gitbook/assets/9%20%281%29.png)
+![The same array in JSON](<../.gitbook/assets/9 (1).png>)
 
 Now the JSON structure will separate each record and display the key/value pair for each record in the array:
 
 ![JSON structure with table and field names](../.gitbook/assets/10.png)
 
-Very clearly this JSON tells us that this _table_ is called **Names** and it has two fields \(keys\) named **Acct:** and **Name**.
+This JSON clearly tells us that this table is called Names and has two fields (keys) named **Acct:** and **Name**.
 
 ## Complex Object Arrays
 
-Now that we understand objects and arrays, let’s go back to that name and address table and put both of them together. When finished, what we want is:
+Now that we understand objects and arrays, let’s go back to that name and address table and combine them. When finished, what we want is:
 
 * an array of names; and
 * an array of addresses _for each name_.
@@ -95,7 +95,7 @@ There is no doubt that JSON is the shareable language that all systems are curre
 
 ![JSON allows ubiquitous communication](../.gitbook/assets/13.png)
 
-In 2011, Google, Bing, Yahoo!, and Yandex created a joint effort to unify a structured data vocabulary for the web and the output was twofold; JavaScript Object Notation for Linked Data \(JSON-LD\) and the vocabulary repository for it at Schema.org[\[1\]](tutorial-from-databases-to-json-ld.md).
+In 2011, Google, Bing, Yahoo!, and Yandex created a joint effort to unify a structured data vocabulary for the web and the output was twofold; JavaScript Object Notation for Linked Data (JSON-LD) and the vocabulary repository for it at Schema.org[\[1\]](tutorial-from-databases-to-json-ld.md).
 
 ![Schema.org](../.gitbook/assets/14.png)
 
@@ -115,7 +115,7 @@ One thing to notice here in JSON-LD is the wealth of information _about the data
 
 #### The Type
 
-The second element in the JSON-LD Schema “always there” squad is the @type specification \(after the colon, it becomes all data annotation\). @type specifies the item type being marked up. All Types have as their top-level, _Thing_ as shown below:
+The second element in the JSON-LD Schema “always there” squad is the @type specification (after the colon, it becomes all data annotation). @type specifies the item type being marked up. All Types have as their top-level, _Thing_ as shown below:
 
 ![@type](../.gitbook/assets/18.png)
 
@@ -127,7 +127,7 @@ Within JSON-LD, each object’s properties are described in-depth. Below we pres
 
 #### Schema Arrays
 
-In addition to standard schema properties, JSON Context can also tell the reader that what is being presented is an array. In the example below, the _person_ object allows for an array of additional e-mail addresses. This is described, in JSON-LD Context, as a set \(“@set”\):
+In addition to standard schema properties, JSON Context can also tell the reader that what is being presented is an array. In the example below, the _person_ object allows for an array of additional e-mail addresses. This is described, in JSON-LD Context, as a set (“@set”):
 
 ![@set](../.gitbook/assets/20.png)
 
@@ -137,6 +137,5 @@ By labeling each type of thing in a JSON object, you can provide the necessary c
 
 ### Endnotes
 
-1. Although Schema.org is only one of the JSON-LD repositories as we’ll see later on. Organizations such as NIST have their own model maps \(“Catalog JSON Model Map” n.d.\) and so does GRCschema.org \(which we’ll be working with. [↑](tutorial-from-databases-to-json-ld.md)
-2. \(“A Guide to JSON-LD for Beginners” n.d.\) [↑](tutorial-from-databases-to-json-ld.md)
-
+1. Although Schema.org is only one of the JSON-LD repositories as we’ll see later on. Organizations such as NIST have their own model maps (“Catalog JSON Model Map” n.d.) and so does GRCschema.org (which we’ll be working with. [↑](tutorial-from-databases-to-json-ld.md)
+2. (“A Guide to JSON-LD for Beginners” n.d.) [↑](tutorial-from-databases-to-json-ld.md)
